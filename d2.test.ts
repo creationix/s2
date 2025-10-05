@@ -1,7 +1,7 @@
-import { encode, encoder } from "./d2.ts"
+import { encode, encoder } from "./d2.ts";
 
-import * as data from "./combined.obj-trie.json" 
+const data = await Bun.file("./combined.obj-trie.json").json();
 
 for (const line of encoder(data)) {
-  console.log(line)
+	console.log(line);
 }
